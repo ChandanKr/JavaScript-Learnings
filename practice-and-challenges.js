@@ -64,7 +64,7 @@ console.log(isNaN(NaN)); // true
 console.log(isNaN(Number.NaN)); // true
 console.log(Number.isNaN(NaN)); // true
 
-// --------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------
 // From "4-expressions-and-operators.js"
 
 // What will be the output of 3**3?
@@ -103,3 +103,41 @@ var num2 = "5";
 
 console.log(num1 == num2); // true
 console.log(num1 === num2); // false
+
+//---------------------------------------------------------------
+// From "5-control-statement-and-loops.js"
+
+//WAP that works out whether if a given year is a leap year or not?
+//Conditions to be a leap year: 
+    // 1. Should divisible by 4.
+    // 2. Should not divisible by 100.
+    // 3. Should divisible by 400.
+
+var year = 2000;
+if(year % 4 == 0){
+    if(year % 100 == 0){
+        if(year % 400 == 0){
+            console.log("Yes, " + year + " is a leap year [as it is divisible by 4, 100 and 100]");
+        }
+        else{
+            console.log("No, " + year + " is not a leap year [as it is not divisible by 400]");
+        }
+    }
+    else{
+        console.log("Yes, " + year + " is a leap year [as it is divisible by 4 and not divisible by 100]");
+    }
+}
+else{
+    console.log("No, " + year + " is not a leap year [as it is not divisible by 4]");
+}
+
+// WAP to print table for given numbers - 8, 9, 12, 15 using for loop.
+
+// var number = 8;
+// var number = 9;
+// var number = 12;
+var number = 15;
+ 
+for(var i = 1; i <= 10; i++){
+    console.log(i * number);
+}
