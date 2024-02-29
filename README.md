@@ -74,3 +74,43 @@ var num2 = "5";
 
 console.log(num1 === num2); // false
 ```
+#### **5.**  Why we use "Functions" in JavaScript ?
+#### **Ans:** We are using "Functions" beacuase of it's reusabilty. This means we have to define the code once and use it many times with different arguments for different results.
+
+```
+A "Function" is a group of reusable code which can be called anywhere in our program. This eliminates the need of writing the same code again and again.
+```
+
+#### **6.**  What is the difference function parameter and function argument ?
+#### **Ans:** 
+- **Function Parameter** : These are the placeholders for the actual values listed in the function's definition.
+- **Function Argument** : These are the actual values that are passed to the function.
+```
+function greet(name) { // 'name' is a parameter.
+    console.log("Hello, " + name + "!!");
+}
+
+greet("Chandan"); // "Chandan" is an argument passed to the function.
+
+```
+#### **7.**  What is the "Default Parameter" ?
+#### **Ans:** **Default parameters** in JavaScript allow you to specify default values for function parameters if no value or undefined is passed when the function is called.
+- Case 1 : When there is only one parameter
+```
+function greet(name = 'Anonymous') {
+    console.log('Hello, ' + name + '!');
+}
+
+greet(); // Output: Hello, Anonymous!
+greet('Chandan'); // Output: Hello, Chandan!
+
+```
+- Case 2 : When there is two or more than two parameters
+```
+function mult(a, b=5){
+    console.log(a*b);
+}
+
+mult(9); // since only one argument provided, it'll consider a=9 (it always pick the first parameter) and b will be default value that is 5, Output: 9*5=45
+mult(9, 8) // since both arguments provided, it'll ignore default value of 5, then Output: 9*8=72
+```
