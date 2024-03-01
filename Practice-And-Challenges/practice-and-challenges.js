@@ -1,7 +1,7 @@
 // PRACTICE TIME
 
 //-----------------------------------------------------
-// From "3-data-types.js"
+console.log("****From 3-data-types.js****");
 
 var practiceTime = 10 + "20";
 console.log(practiceTime, typeof(practiceTime)); // 1020 string
@@ -65,7 +65,7 @@ console.log(isNaN(Number.NaN)); // true
 console.log(Number.isNaN(NaN)); // true
 
 // -------------------------------------------------------------------------
-// From "4-expressions-and-operators.js"
+console.log("****From 4-expressions-and-operators.js****");
 
 // What will be the output of 3**3?
 console.log(3**3); // 27 => represents 3 raised to the power of 3
@@ -105,7 +105,7 @@ console.log(num1 == num2); // true
 console.log(num1 === num2); // false
 
 //---------------------------------------------------------------
-// From "5-control-statement-and-loops.js"
+console.log("****From 5-control-statement-and-loops.js****");
 
 //WAP that works out whether if a given year is a leap year or not?
 //Conditions to be a leap year: 
@@ -143,5 +143,96 @@ for(var i = 1; i <= 10; i++){
 }
 
 //---------------------------------------------------------------
-// From "6-functions.js"
+console.log("****From '6-functions.js'****");
 
+// Calculator Function
+// Write a JS function calculator that takes two numbers and an operator as parameter and returns the operation. The function should support addition, subtraction, multiplication, division and modulus.
+
+function calculator(num1, num2, operation){
+    switch (operation) {
+        case "+":
+            console.log(num1 + num2);
+            break;
+        case "-":
+            console.log(num1 - num2);
+            break;
+        case "*":
+            console.log(num1 * num2);
+            break;
+        case "/":
+            if(num2 == 0){
+                console.log("Sorry, cant't divide by 0");
+                break;
+            }
+            else{
+                console.log(num1 / num2);
+                break;
+            }
+        case "%":
+            if(num2 == 0){
+                console.log("Sorry, cant't divide by 0");
+                break;
+            }
+            else{
+                console.log(num1 % num2);
+                break;
+            }
+        default:
+            console.log("Invalid Data...");
+    }
+}
+
+calculator(5, 2, '+');
+calculator(8, 4, '-');
+calculator(5, 2, '*');
+calculator(10, 5, '/');
+calculator(10, 0, '/');
+calculator(50, 3, '%');
+calculator(50, 0, '%');
+calculator(50, 3, '34%');
+
+
+
+// Reverse a String
+// Write a function to reverse a given string without using built-in reverse method.
+
+const isReversed = (originalString) => {
+    var reversedString = "";
+    for(let char = originalString.length-1; char >= 0; char--){
+        reversedString = reversedString + originalString[char];
+    }
+    console.log(reversedString);
+};
+
+isReversed("chandan kumar");
+
+// Palindrome Check: string or number remains same when it is reversed
+// Write a function to determine if a given string is a palindrome or not.
+
+const isPalindrome = (originalString) => {
+    var reversedString = "";
+    for(let char = originalString.length-1; char >= 0; char--){
+        reversedString = reversedString + originalString[char];
+    }
+    console.log(originalString === reversedString ? `Yes, ${originalString} is a Palindrome String` : `No, ${originalString} is not a Palindrome String`);
+};
+
+isPalindrome("madam");
+isPalindrome("chandan");
+
+//---------------------------------------------------------------
+console.log("****From '7-arrays.js'****");
+
+// WAP to multiply each element with 2
+let arr = [2, 5, 7, 4, 9, 3];
+
+arr.forEach((currentElement) => {
+    console.log(currentElement * 2);
+});
+
+
+const doubleValue = arr.map((currentElement) => {
+    return currentElement * 2;
+});
+
+console.log(doubleValue);

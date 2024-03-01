@@ -114,3 +114,63 @@ function mult(a, b=5){
 mult(9); // since only one argument provided, it'll consider a=9 (it always pick the first parameter) and b will be default value that is 5, Output: 9*5=45
 mult(9, 8) // since both arguments provided, it'll ignore default value of 5, then Output: 9*8=72
 ```
+#### **8.**  Write a function to reverse a given string without using built-in reverse method.
+#### **Ans:** 
+```
+const isReversed = (originalString) => {
+    var reversedString = "";
+    for(let char = originalString.length-1; char >= 0; char--){
+        reversedString = reversedString + originalString[char];
+    }
+    console.log(reversedString);
+};
+
+isReversed("chandan kumar"); // Output: ramuk nadnahc
+
+```
+#### **9.**  Write a function to determine if a given string is a palindrome or not.
+#### **Ans:** 
+```
+const isPalindrome = (originalString) => {
+    var reversedString = "";
+    for(let char = originalString.length-1; char >= 0; char--){
+        reversedString = reversedString + originalString[char];
+    }
+    console.log(originalString === reversedString ? `Yes, ${originalString} is a Palindrome String.` : `No, ${originalString} is not a Palindrome String.`);
+};
+
+isPalindrome("madam"); // Output: Yes, madam is a Palindrome String.
+isPalindrome("chandan"); // Output: No, chandan is not a Palindrome String.
+
+```
+#### **10.**  What is difference between forEach() and map()?
+#### **Ans:** 
+- **forEach()**
+**Pointers**  | **forEach()** | **map()**
+------------- | ------------- | -------------
+**Purpose**  | used to iterate over an array and execute a function for each element of the array.  | used to iterate over an array and transform each element of the array using a provided callback function.
+**Return Value**  | does not return a new array. it simply iterates over each element and executes the provided callback function. The return value of forEach is always **undefined**.  | returns a **new array** containing the results of applying the callback function to each element of the original array.
+**Mutation**  | It does not mutate the original array. The callback function can modify the elements, but the original array remains unchanged.  | It does not mutate the original array. Instead, it creates and returns a new array with the transformed elements.
+
+- **Examples**
+    * forEach()
+    ```
+    let numbers = [1, 2, 3, 4, 5];
+
+    numbers.forEach(function(element) {
+        console.log(element); // Output each element
+    });
+
+    ```
+    * map()
+    ```
+    let numbers = [1, 2, 3, 4, 5];
+
+    let doubledNumbers = numbers.map(function(element) {
+        return element * 2;
+    });
+
+    console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+    ```
+
+**Summary:** forEach is for iteration with side effects, while map is for transformation. Both have their own specific use cases depending on what you need to accomplish.
