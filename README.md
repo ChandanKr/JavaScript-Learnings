@@ -146,14 +146,10 @@ isPalindrome("chandan"); // Output: No, chandan is not a Palindrome String.
 #### **10.**  What is difference between forEach() and map()?
 #### **Ans:** 
 - **forEach()**
-**Pointers**  | **forEach()** | **map()**
-------------- | ------------- | -------------
-**Purpose**  | used to iterate over an array and execute a function for each element of the array.  | used to iterate over an array and transform each element of the array using a provided callback function.
-**Return Value**  | does not return a new array. it simply iterates over each element and executes the provided callback function. The return value of forEach is always **undefined**.  | returns a **new array** containing the results of applying the callback function to each element of the original array.
-**Mutation**  | It does not mutate the original array. The callback function can modify the elements, but the original array remains unchanged.  | It does not mutate the original array. Instead, it creates and returns a new array with the transformed elements.
-
-- **Examples**
-    * forEach()
+  * **Purpose** : used to iterate over an array and execute a function for each element of the array.
+  * **Return Value** : does not return a new array. it simply iterates over each element and executes the provided callback function. The return value of forEach is always **undefined**.
+  *  **Mutation** : It does not mutate the original array. The callback function can modify the elements, but the original array remains unchanged.
+  * **Example**
     ```
     let numbers = [1, 2, 3, 4, 5];
 
@@ -162,7 +158,12 @@ isPalindrome("chandan"); // Output: No, chandan is not a Palindrome String.
     });
 
     ```
-    * map()
+
+- **map()**
+  * **Purpose** : used to iterate over an array and transform each element of the array using a provided callback function.
+  * **Return Value** : returns a **new array** containing the results of applying the callback function to each element of the original array.
+  *  **Mutation** : It does not mutate the original array. Instead, it creates and returns a new array with the transformed elements.
+  * **Example**
     ```
     let numbers = [1, 2, 3, 4, 5];
 
@@ -173,4 +174,4 @@ isPalindrome("chandan"); // Output: No, chandan is not a Palindrome String.
     console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
     ```
 
-**Summary:** forEach is for iteration with side effects, while map is for transformation. Both have their own specific use cases depending on what you need to accomplish.
+- **Summary:** forEach is for iteration with side effects, while map is for transformation. Both have their own specific use cases depending on what you need to accomplish.
