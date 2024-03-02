@@ -107,11 +107,11 @@ console.log(num1 === num2); // false
 //---------------------------------------------------------------
 console.log("****From 5-control-statement-and-loops.js****");
 
-//WAP that works out whether if a given year is a leap year or not?
+//WAP that works out whether a given year is a leap year or not?
 //Conditions to be a leap year: 
-    // 1. Should divisible by 4.
-    // 2. Should not divisible by 100.
-    // 3. Should divisible by 400.
+    // 1. Should be divisible by 4.
+    // 2. Should not be divisible by 100.
+    // 3. Should be divisible by 400.
 
 var year = 2000;
 if(year % 4 == 0){
@@ -146,7 +146,7 @@ for(var i = 1; i <= 10; i++){
 console.log("****From '6-functions.js'****");
 
 // Calculator Function
-// Write a JS function calculator that takes two numbers and an operator as parameter and returns the operation. The function should support addition, subtraction, multiplication, division and modulus.
+// Write a JS function calculator that takes two numbers and an operator as a parameter and returns the operation. The function should support addition, subtraction, multiplication, division and modulus.
 
 function calculator(num1, num2, operation){
     switch (operation) {
@@ -161,7 +161,7 @@ function calculator(num1, num2, operation){
             break;
         case "/":
             if(num2 == 0){
-                console.log("Sorry, cant't divide by 0");
+                console.log("Sorry, can't divide by 0");
                 break;
             }
             else{
@@ -170,7 +170,7 @@ function calculator(num1, num2, operation){
             }
         case "%":
             if(num2 == 0){
-                console.log("Sorry, cant't divide by 0");
+                console.log("Sorry, can't divide by 0");
                 break;
             }
             else{
@@ -194,7 +194,7 @@ calculator(50, 3, '34%');
 
 
 // Reverse a String
-// Write a function to reverse a given string without using built-in reverse method.
+// Write a function to reverse a given string without using the built-in reverse method.
 
 const isReversed = (originalString) => {
     var reversedString = "";
@@ -224,15 +224,40 @@ isPalindrome("chandan");
 console.log("****From '7-arrays.js'****");
 
 // WAP to multiply each element with 2
-let arr = [2, 5, 7, 4, 9, 3];
+    let arr = [2, 5, 7, 4, 9, 3];
 
-arr.forEach((currentElement) => {
-    console.log(currentElement * 2);
-});
+    arr.forEach((currentElement) => {
+        console.log(currentElement * 2);
+    });
 
 
-const doubleValue = arr.map((currentElement) => {
-    return currentElement * 2;
-});
+    const doubleValue = arr.map((currentElement) => {
+        return currentElement * 2;
+    });
 
-console.log(doubleValue);
+    console.log(doubleValue);
+
+// Add "December" at the end of an array i.e. months = ['Jan', 'March', 'April', 'June', 'July']
+
+    // Using push() method
+    let months1 = ['Jan', 'march', 'April', 'June', 'July'];
+    months1.push("December");
+    console.log(months1);
+
+    // Using splice() method
+    let months2 = ['Jan', 'march', 'April', 'June', 'July'];
+    months2.splice(months2.length, 0, "December");
+    console.log(months2);
+
+// What is the return value of splice method?
+    // console.log(months2.splice(months2.length, 0, "December"));
+    // It will return an empty array.
+
+// Update the element of month1 "march" to "March".
+    const marchIndex = months1.indexOf("march");
+    months1.splice(marchIndex, 1, "March");
+    console.log(months1);
+
+// Delete "June" from months2
+    months2.splice(months1.indexOf("June"), 1);
+    console.log(months2);
