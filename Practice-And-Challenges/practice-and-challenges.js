@@ -261,3 +261,86 @@ console.log("****From '7-arrays.js'****");
 // Delete "June" from months2
     months2.splice(months1.indexOf("June"), 1);
     console.log(months2);
+
+
+// Cart Update: In e-commerce website, when we want to remove/delete any product from addToCart page.
+// Let say user wants to delete value 6 from [1, 2, 3, 4, 6, 5, 6, 7, 8, 9]
+    let cart = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+    let value = 6;
+
+    let updatedCart = cart.filter((currElem) => {
+        return currElem !== value;
+    })
+
+    console.log(updatedCart);
+
+// Given an array of products where each product has a name and a price, write a function that uses the filter method to return an array containing only the products with a "price less than or equal to 500".
+
+    const products =[
+        { name: "Laptop", price: 1200 },
+        { name: "Phone", price: 800 },
+        { name: "Tablet", price: 700 },
+        { name: "Smartwatch", price: 400 },
+        { name: "Neckband", price: 150 },
+        { name: "Bluetooth Speaker", price: 500 },
+        { name: "Mouse", price: 150 },
+        { name: "Television", price: 1000 }
+    ];
+
+    const filteredProducts = products.filter((currElem) => {
+        return currElem.price >= 500 ;
+    });
+
+    console.log(filteredProducts);
+
+// Filter unique values from given arrays
+    const values = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+
+    let uniqueValues = values.filter((currElem, index, arr) => {
+        return arr.indexOf(currElem) == index;
+    });
+    console.log(uniqueValues);
+
+    //OR, with SET and SPREAD Operator
+
+    console.log([...new Set(values)]);
+
+
+// Use map to square each number and create a new array
+     const squareNumbers  = [2, 5, 6, 8 , 4];
+
+     const newSquareNumbers = squareNumbers.map((a) => a**2);
+     console.log(newSquareNumbers);
+
+// Using map method, WAP that takes an array of strings and returns a new array where each string is uppercased.
+    const simpleString = ["apple", "banana", "cherry", "date"];
+
+    const uppercasedString = simpleString.map((currElem) => {
+        return currElem.toUpperCase();
+    });
+    console.log(uppercasedString); // Output: [ 'APPLE', 'BANANA', 'CHERRY', 'DATE' ]
+
+// Using map method, WAP that takes an array of numbers and returns a new array where each number is squared, but only if it is an even number.
+    const simpleNumbers = [3, 5, 6, 8, 21, 20, 67, 18];
+
+    const sqEvenNumbers = simpleNumbers.map((currElem) => {
+        return currElem % 2 === 0 ? currElem ** 2 : "rejected";
+    }).filter((currElem) => currElem !== "rejected");
+    console.log(sqEvenNumbers); // Output: [ 36, 64, 400, 324 ]
+
+
+// Using map method, WAP that takes an array of names and returns a new array where each name is prefixed with "Mr. ".
+    const simpleNames = ["Ram", "Laxman", "Barat", "Shatrughan"];
+
+    const prefixedNames = simpleNames.map((currElem) => `Mr. ${currElem}`);
+    console.log(prefixedNames); // Output: [ 'Mr. Ram', 'Mr. Laxman', 'Mr. Barat', 'Mr. Shatrughan' ]
+
+
+// Using Reduce method, WAP that calculates the total price of items in a shopping cart. The function should take an array of item prices as input and return the total price.
+    const cartValue = [400, 500, 300, 2300, 1000];
+
+    const totalCartValue = cartValue.reduce((accumulator, currElem) => {
+        return accumulator + currElem;
+    }, 0);
+
+    console.log(totalCartValue); // Output: 4500

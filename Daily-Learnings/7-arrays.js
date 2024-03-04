@@ -207,3 +207,109 @@ console.log(boysArray.includes('Rahul', 2));
 console.log(boysArray.includes('Arjun'));
 console.log(boysArray.includes('Arjun', 2));
 
+//------------------------------------------------------------------------------
+console.log("***Filters in an Array***");
+
+// Filter method is used to create a new array with all elements that pass a test implemented by the provided function.
+
+// 1. find() method: The find() method is used to find the first element in an arraythat satisfies a provided testing function. It returs the first matching element on undefined if no element is found.
+
+const numbers = [1, 9, 2, 3, 6, 4, 5, 6, 7, 1, 8, 9, 10];
+
+// Find the first even number
+const firstEvenNumber = numbers.find(number => number % 2 === 0);
+console.log(firstEvenNumber); // Output: 2
+
+// Find the number that is greater than 5
+let numberGreaterThanFive = numbers.find(number => number > 5);
+console.log(numberGreaterThanFive); // Output: 9
+
+
+// 2. findIndex() method: The findIndex() method of TypedArray instances returns the index of first element in a typed array that satisfies a provided testing function. If no elements satisfy the testing function, -1 is returned.
+
+// Find the index of first even number
+const indexOfFirstEvenNumber = numbers.findIndex(number => number % 2 === 0);
+console.log(indexOfFirstEvenNumber); // Output: 2
+
+// Find the index of number that is greater than 5
+let indexOfNumberGreaterThanFive = numbers.findIndex(number => number > 5);
+console.log(indexOfNumberGreaterThanFive); // Output: 1
+
+
+// 3. filter() method: The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+
+// Find the array of all even numbers
+const filteredEvenNumber = numbers.filter(number => number % 2 === 0);
+console.log(filteredEvenNumber); // Output: [ 2, 6, 4, 6, 8, 10 ]
+
+// Find the array of all numbers that is greater than 5
+let filteredNumberGreaterThanFive = numbers.filter(number => number > 5);
+console.log(filteredNumberGreaterThanFive); // Output: [ 9, 6,  6, 7, 8, 9, 10 ]
+
+
+//------------------------------------------------------------------------------
+console.log("***Sort and Compare an Array***");
+
+// By default, the sort() method sorts the elements of an array in ascending order, converting the elements into strings and comparing their sequences of UTF-16 code units values.
+
+    // SORT an Array
+    const numbersToSort = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+    console.log(numbersToSort.sort());
+
+    let colorsToSort = ['Red', 'Green', 'Blue', 'Yellow', 'White'];
+    console.log(colorsToSort.sort());
+
+    // COMPARE and SORT
+    // Sort in ascending order
+    // SYNTAX:
+        // if(a > b) return -1  => means keep the order
+        // if(b > a) return 1  => means switch the order
+
+        numbersToSort.sort((a, b) => {
+            if (a > b) return 1;
+            if (b > a) return -1;
+        });
+        console.log(numbersToSort);
+        
+        colorsToSort.sort((a, b) => {
+            if (a > b) return 1;
+            if (b > a) return -1;
+        });
+        console.log(colorsToSort);
+
+    // Sort in descending order
+    // SYNTAX:
+        // if(a > b) return 1  => means switch the order
+        // if(b > a) return -1  => means keep the order
+
+    numbersToSort.sort((a, b) => {
+        if (a > b) return -1;
+        if (b > a) return 1;
+    });
+    console.log(numbersToSort);
+    
+    colorsToSort.sort((a, b) => {
+        if (a > b) return -1;
+        if (b > a) return 1;
+    });
+    console.log(colorsToSort);
+
+//------------------------------------------------------------------------------
+console.log("***Reduce method in an Array***");
+
+// The reduce() method in JavaScript is used to reduce the elements of an array to a single value. It executes a provided function once for each element in the array, resulting in a single output value. 
+
+// Syntax:
+    // arrayName.reduce(function callback(accumulator, currentValue, index, array) {
+    //     // logic
+    //     // return the updated accumulator value
+    // }, initialValue);
+
+    const val = [1, 2, 3, 4, 5];
+
+    const sum = val.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue;
+    }, 0); // 0 is the initial value of accumulator
+    
+    console.log(sum); // Output: 15 (1 + 2 + 3 + 4 + 5 = 15)
+    
