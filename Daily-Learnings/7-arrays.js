@@ -196,7 +196,7 @@ console.log(boysArray.lastIndexOf('Ram')); // Output: 5
 console.log(boysArray.lastIndexOf('Rahul', 4)); // Output: 2 => First it will go to index 3 and search till that element only
 
 // 3. includes() Method
-// It checks whether an array an array includes a certain element or not.
+// It checks whether an array includes a certain element or not.
 // It returns boolean value -  true or false.
 
 // Syntax: includes(searchElement, fromIndex);
