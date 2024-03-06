@@ -1,4 +1,4 @@
-// PRACTICE TIME
+//todo: PRACTICE TIME
 
 //-----------------------------------------------------
 console.log("****From 3-data-types.js****");
@@ -67,14 +67,14 @@ console.log(Number.isNaN(NaN)); // true
 // -------------------------------------------------------------------------
 console.log("****From 4-expressions-and-operators.js****");
 
-// What will be the output of 3**3?
+//! What will be the output of 3**3?
 console.log(3**3); // 27 => represents 3 raised to the power of 3
 console.log(10**-1); // 1/10 = 0.1 => represents 10 raised to the power of -1
 
-//  What will be the output when we add a number and a string?
+//!  What will be the output when we add a number and a string?
 console.log(4 + "Chandan"); // 4Chandan => the number 4 is converted to a string "4", and then it's concatenated with the string "Chandan", resulting in "4Chandan".
 
-// WAP  to swap two numbers.
+//! WAP  to swap two numbers.
 var firstNumber = 5;
 var secondNumber = 10;
 console.log("Before swapping, First Number: ", firstNumber);
@@ -86,7 +86,7 @@ firstNumber = tempNumber; // firstNumber = 10
 console.log("After swapping, First Number: ", firstNumber);
 console.log("After swapping, Second Number: ", secondNumber);
 
-// WAP  to swap two numbers without using third variable.
+//! WAP  to swap two numbers without using third variable.
 var a = 5;
 var b = 10;
 
@@ -97,7 +97,7 @@ a = a-b; // 15-5 => a = 10
 console.log("After swapping, a: ", a); // After swapping, a:  10
 console.log("After swapping, b: ", b); // After swapping, b:  5
 
-// What is the difference between == and === ?
+//! What is the difference between == and === ?
 var num1 = 5;
 var num2 = "5";
 
@@ -107,7 +107,7 @@ console.log(num1 === num2); // false
 //---------------------------------------------------------------
 console.log("****From 5-control-statement-and-loops.js****");
 
-//WAP that works out whether a given year is a leap year or not?
+//! WAP that works out whether a given year is a leap year or not?
 //Conditions to be a leap year: 
     // 1. Should be divisible by 4.
     // 2. Should not be divisible by 100.
@@ -131,7 +131,7 @@ else{
     console.log("No, " + year + " is not a leap year [as it is not divisible by 4]");
 }
 
-// WAP to print table for given numbers - 8, 9, 12, 15 using for loop.
+//! WAP to print table for given numbers - 8, 9, 12, 15 using for loop.
 
 // var number = 8;
 // var number = 9;
@@ -145,8 +145,8 @@ for(var i = 1; i <= 10; i++){
 //---------------------------------------------------------------
 console.log("****From '6-functions.js'****");
 
-// Calculator Function
-// Write a JS function calculator that takes two numbers and an operator as a parameter and returns the operation. The function should support addition, subtraction, multiplication, division and modulus.
+//* Calculator Function
+//! Write a JS function calculator that takes two numbers and an operator as a parameter and returns the operation. The function should support addition, subtraction, multiplication, division and modulus.
 
 function calculator(num1, num2, operation){
     switch (operation) {
@@ -193,8 +193,8 @@ calculator(50, 3, '34%');
 
 
 
-// Reverse a String
-// Write a function to reverse a given string without using the built-in reverse method.
+//* Reverse a String
+//! Write a function to reverse a given string without using the built-in reverse method.
 
 const isReversed = (originalString) => {
     var reversedString = "";
@@ -206,8 +206,8 @@ const isReversed = (originalString) => {
 
 isReversed("chandan kumar");
 
-// Palindrome Check: string or number remains same when it is reversed
-// Write a function to determine if a given string is a palindrome or not.
+//* Palindrome Check: string or number remains same when it is reversed
+//! Write a function to determine if a given string is a palindrome or not.
 
 const isPalindrome = (originalString) => {
     var reversedString = "";
@@ -223,7 +223,7 @@ isPalindrome("chandan");
 //---------------------------------------------------------------
 console.log("****From '7-arrays.js'****");
 
-// WAP to multiply each element with 2
+//! WAP to multiply each element with 2
     let arr = [2, 5, 7, 4, 9, 3];
 
     arr.forEach((currentElement) => {
@@ -237,7 +237,7 @@ console.log("****From '7-arrays.js'****");
 
     console.log(doubleValue);
 
-// Add "December" at the end of an array i.e. months = ['Jan', 'March', 'April', 'June', 'July']
+//! Add "December" at the end of an array i.e. months = ['Jan', 'March', 'April', 'June', 'July']
 
     // Using push() method
     let months1 = ['Jan', 'march', 'April', 'June', 'July'];
@@ -249,22 +249,22 @@ console.log("****From '7-arrays.js'****");
     months2.splice(months2.length, 0, "December");
     console.log(months2);
 
-// What is the return value of splice method?
+//! What is the return value of splice method?
     // console.log(months2.splice(months2.length, 0, "December"));
     // It will return an empty array.
 
-// Update the element of month1 "march" to "March".
+//! Update the element of month1 "march" to "March".
     const marchIndex = months1.indexOf("march");
     months1.splice(marchIndex, 1, "March");
     console.log(months1);
 
-// Delete "June" from months2
+//! Delete "June" from months2
     months2.splice(months1.indexOf("June"), 1);
     console.log(months2);
 
 
-// Cart Update: In e-commerce website, when we want to remove/delete any product from addToCart page.
-// Let say user wants to delete value 6 from [1, 2, 3, 4, 6, 5, 6, 7, 8, 9]
+//! Cart Update: In e-commerce website, when we want to remove/delete any product from addToCart page.
+//* Let say user wants to delete value 6 from [1, 2, 3, 4, 6, 5, 6, 7, 8, 9]
     let cart = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
     let value = 6;
 
@@ -274,7 +274,7 @@ console.log("****From '7-arrays.js'****");
 
     console.log(updatedCart);
 
-// Given an array of products where each product has a name and a price, write a function that uses the filter method to return an array containing only the products with a "price less than or equal to 500".
+//! Given an array of products where each product has a name and a price, write a function that uses the filter method to return an array containing only the products with a "price less than or equal to 500".
 
     const products =[
         { name: "Laptop", price: 1200 },
@@ -293,7 +293,7 @@ console.log("****From '7-arrays.js'****");
 
     console.log(filteredProducts);
 
-// Filter unique values from given arrays
+//! Filter unique values from given arrays
     const values = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
 
     let uniqueValues = values.filter((currElem, index, arr) => {
@@ -306,13 +306,13 @@ console.log("****From '7-arrays.js'****");
     console.log([...new Set(values)]);
 
 
-// Use map to square each number and create a new array
+//! Use map to square each number and create a new array
      const squareNumbers  = [2, 5, 6, 8 , 4];
 
      const newSquareNumbers = squareNumbers.map((a) => a**2);
      console.log(newSquareNumbers);
 
-// Using map method, WAP that takes an array of strings and returns a new array where each string is uppercased.
+//! Using map method, WAP that takes an array of strings and returns a new array where each string is uppercased.
     const simpleString = ["apple", "banana", "cherry", "date"];
 
     const uppercasedString = simpleString.map((currElem) => {
@@ -320,7 +320,7 @@ console.log("****From '7-arrays.js'****");
     });
     console.log(uppercasedString); // Output: [ 'APPLE', 'BANANA', 'CHERRY', 'DATE' ]
 
-// Using map method, WAP that takes an array of numbers and returns a new array where each number is squared, but only if it is an even number.
+//! Using map method, WAP that takes an array of numbers and returns a new array where each number is squared, but only if it is an even number.
     const simpleNumbers = [3, 5, 6, 8, 21, 20, 67, 18];
 
     const sqEvenNumbers = simpleNumbers.map((currElem) => {
@@ -329,14 +329,14 @@ console.log("****From '7-arrays.js'****");
     console.log(sqEvenNumbers); // Output: [ 36, 64, 400, 324 ]
 
 
-// Using map method, WAP that takes an array of names and returns a new array where each name is prefixed with "Mr. ".
+//! Using map method, WAP that takes an array of names and returns a new array where each name is prefixed with "Mr. ".
     const simpleNames = ["Ram", "Laxman", "Barat", "Shatrughan"];
 
     const prefixedNames = simpleNames.map((currElem) => `Mr. ${currElem}`);
     console.log(prefixedNames); // Output: [ 'Mr. Ram', 'Mr. Laxman', 'Mr. Barat', 'Mr. Shatrughan' ]
 
 
-// Using Reduce method, WAP that calculates the total price of items in a shopping cart. The function should take an array of item prices as input and return the total price.
+//! Using Reduce method, WAP that calculates the total price of items in a shopping cart. The function should take an array of item prices as input and return the total price.
     const cartValue = [400, 500, 300, 2300, 1000];
 
     const totalCartValue = cartValue.reduce((accumulator, currElem) => {
@@ -344,3 +344,87 @@ console.log("****From '7-arrays.js'****");
     }, 0);
 
     console.log(totalCartValue); // Output: 4500
+
+//---------------------------------------------------------------
+console.log("****From '8-string.js'****");
+
+//! Find Output of below code
+
+    let strValue = "This file is all about of JavaScript Interview Questions!!"
+
+    console.log(strValue.slice(1)); // Output: his file is all about of JavaScript Interview Questions!!
+    console.log(strValue.replace("all", "All")); // Output: This file is All about of JavaScript Interview Questions!!
+    console.log(strValue.substring(1)); // Output: his file is all about of JavaScript Interview Questions!!
+
+//! Write a JavaScript function that prints the letter 'a' through 'z' in the console. [ HINT: You should use a loop to iterate through the letters and prnt each one in a new line. ]
+    // console.log("a".charCodeAt(0)); // Output: 97
+    // console.log("z".charCodeAt(0)); // Output: 122
+
+    // console.log(String.fromCharCode(97)); // Output: a
+    // console.log(String.fromCharCode(122)); // Output: z
+
+    for(let i = 97; i <= 122; i++){
+        console.log(String.fromCharCode(i));
+    }
+
+//! Write a JavaScript function to count the number of vowels in a string.
+
+    const numberOfVowels = ((string) => {
+        let vowels = "aeiouAEIOU"
+        let count = 0;
+        for(let char of string){
+            if(vowels.includes(char)){
+                count++;
+            }
+        }
+        return count;
+    });
+
+    console.log("Total Vowels Present in \"CHANDAN\": ",numberOfVowels("CHANDAN")); // Output: Total Vowels Present in "CHANDAN":  2
+    console.log("Total Vowels Present in \"Chandigarh University\": ",numberOfVowels("Chandigarh University")); // Output: Total Vowels Present in "Chandigarh University":  7
+
+//! Write a JavaScript function to check if all the vowels presents in a string or not?
+
+    const isAllVowelsPresent = ((str) => {
+        let vowels = 'aeiou';
+
+        for(let char of vowels){
+            if(!str.includes(char)){
+                return "BIG NO";
+            }
+        }
+        return "Of course, YES";
+    });
+
+    console.log("Is All Vowels Present in \"your name is chandan\"? ",isAllVowelsPresent("your name is chandan")); // Output: Is All Vowels Present in "your name is chandan"?  Of course, YES
+
+    console.log("Is All Vowels Present in \"my name is chandan\"? ",isAllVowelsPresent("my name is chandan")); // Output: Is All Vowels Present in "my name is chandan"?  BIG NO
+
+//! Write a JavaScript function isPangram to check given string is a Pangram or NOT? The function should be case-insensitive and ignore spaces.
+
+    //todo:- Pangram means a string that contains all letters of the alphabet.
+
+    //! Constraints: 
+        //* 1. The input string will consist of alphabetic characters and spaces.
+        //* 2. The function should handle both uppercase and lowercase letters.
+        //* 3. Consider the English alphabet with 26 letters.
+        //* 4. The function should handle special characters also.
+
+    const isPangram = ((givenString) => {
+        // Converting string into array elements with characters of the string
+        let inputArray = givenString.toLowerCase().split("");
+
+        // Filtering characters other than a-z
+        const values = inputArray.filter((currElem) => {
+            let aCharCode = "a".charCodeAt(); // 97
+            let zCharCode = "z".charCodeAt(); // 122
+            return (currElem.charCodeAt() >= aCharCode && currElem.charCodeAt() <= zCharCode);
+        });
+
+        // Removing duplicate values and store in a pure array by using spread operator(...)
+        let pureArray = [...new Set(values)];
+
+        return pureArray.length === 26 ? "Yes, it is a Pangram" : "No, It's not a Pangram";
+    });
+    console.log(isPangram("A quick brown fox jumps over the lazy dog.")); // Output: Yes, it is a Pangram
+    console.log(isPangram("A quick green fox jumps over the lazy dog.")); // Output: No, It's not a Pangram

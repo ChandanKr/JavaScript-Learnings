@@ -175,3 +175,100 @@ isPalindrome("chandan"); // Output: No, chandan is not a Palindrome String.
     ```
 
 - **Summary:** forEach is for iteration with side effects, while map is for transformation. Both have their own specific use cases depending on what you need to accomplish.
+
+#### **11.**  What will be the out put of following code?
+```
+let strValue = "This file is all about of JavaScript Interview Questions!!"
+    a) console.log(strValue.slice(1));
+    b) console.log(strValue.replace("all", "All"));
+    c) console.log(strValue.substring(1));
+
+```
+#### **Ans:** Outputs are:
+```
+a) his file is all about of JavaScript Interview Questions!!
+b) This file is All about of JavaScript Interview Questions!!
+c) his file is all about of JavaScript Interview Questions!!
+```
+#### **12.**  Write a JavaScript function that prints the letter 'a' through 'z' in the console. 
+[ **HINT:** You should use a loop to iterate through the letters and prnt each one in a new line. ]
+#### **Ans:**
+```
+// console.log("a".charCodeAt(0)); // Output: 97
+// console.log("z".charCodeAt(0)); // Output: 122
+
+// console.log(String.fromCharCode(97)); // Output: a
+// console.log(String.fromCharCode(122)); // Output: z
+
+for(let i = 97; i <= 122; i++){
+    console.log(String.fromCharCode(i));
+}
+```
+#### **13.**  Write a JavaScript function to count the number of vowels in a string.
+#### **Ans:** 
+```
+const numberOfVowels = ((string) => {
+    let vowels = "aeiouAEIOU"
+    let count = 0;
+    for(let char of string){
+        if(vowels.includes(char)){
+            count++;
+        }
+    }
+    return count;
+});
+
+console.log("Total Vowels Present in \"CHANDAN\": ",numberOfVowels("CHANDAN")); // Output: Total Vowels Present in "CHANDAN":  2
+console.log("Total Vowels Present in \"Chandigarh University\": ",numberOfVowels("Chandigarh University")); // Output: Total Vowels Present in "Chandigarh University":  7
+```
+#### **14.**  Write a JavaScript function to check if all the vowels presents in a string or not?
+#### **Ans:** 
+```
+const isAllVowelsPresent = ((str) => {
+    let vowels = 'aeiou';
+
+    for(let char of vowels){
+        if(!str.includes(char)){
+            return "BIG NO";
+        }
+    }
+    return "Of course, YES";
+});
+
+console.log("Is All Vowels Present in \"your name is chandan\"? ",isAllVowelsPresent("your name is chandan")); // Output: Is All Vowels Present in "your name is chandan"?  Of course, YES
+
+console.log("Is All Vowels Present in \"my name is chandan\"? ",isAllVowelsPresent("my name is chandan")); // Output: Is All Vowels Present in "my name is chandan"?  BIG NO
+```
+#### **15.**  Write a JavaScript function isPangram to check given string is a Pangram or NOT? The function should be case-insensitive and ignore spaces.
+**Pangram:** a string that contains all letters of the alphabet.
+
+**Constraints:**
+
+    - The input string will consist of alphabetic characters and spaces.
+    - The function should handle both uppercase and lowercase letters.
+    - Consider the English alphabet with 26 letters.
+    - The function should handle special characters also.
+
+#### **Ans:** 
+```
+const isPangram = ((givenString) => {
+    
+    // Converting string into array elements with characters of the string
+    let inputArray = givenString.toLowerCase().split("");
+
+    // Filtering characters other than a-z
+    const values = inputArray.filter((currElem) => {
+        let aCharCode = "a".charCodeAt(); // 97
+        let zCharCode = "z".charCodeAt(); // 122
+        return (currElem.charCodeAt() >= aCharCode && currElem.charCodeAt() <= zCharCode);
+    });
+
+    // Removing duplicate values and store in a pure array by using spread operator(...)
+    let pureArray = [...new Set(values)];
+
+    return pureArray.length === 26 ? "Yes, it is a Pangram" : "No, It's not a Pangram";
+});
+
+console.log(isPangram("A quick brown fox jumps over the lazy dog.")); // Output: Yes, it is a Pangram
+console.log(isPangram("A quick green fox jumps over the lazy dog.")); // Output: No, It's not a Pangram
+```
