@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Urbanist", sans-serif;
+      }
+      html {
+        color: #fff;
+        font-size: 62.5%;
+      }
+      body {
+        background-color: #1b1b1d;
+      }
+      .main-div {
+        margin: 5rem 2rem 2rem 2rem;
+      }
+      #myInput {
+        padding: 8px;
+        width: -webkit-fill-available;
+      }
+      p {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+      }
+      .output {
+        margin-top: 2rem;
+      }
+      .output-div{
+        display: flex;
+        justify-content: space-around;
+      }
+      h1{
+        color: Yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <input
+        type="text"
+        id="myInput"
+        name="username"
+        placeholder="Type Something..."
+        autocomplete="off"
+      />
+      <div class="output-div">
+        <div class="output">
+          <h1>Key Down Details:</h1>
+          <p class="inputValue">Input Value :</p>
+          <p class="inputName">Input Name :</p>
+          <p class="inputType">Input Type :</p>
+          <p class="eventType">Event Type :</p>
+        </div>
+        <div class="output">
+          <h1>Key Down Details:</h1>
+          <p class="inputValue2">Input Value :</p>
+          <p class="inputName2">Input Name :</p>
+          <p class="inputType2">Input Type :</p>
+          <p class="eventType2">Event Type :</p>
+        </div>
+    </div>
+
+    <script>
+      let myInput = document.getElementById("myInput");
+
+      const handleInput = (event) => {
+        // console.log(event);
+        document.querySelector(".inputValue").innerHTML = `Input Value : ${event.target.value}`;
+        document.querySelector(".inputName").innerHTML = `Input Name : ${event.target.name}`;
+        document.querySelector(".inputType").innerHTML = `Input Type     : ${event.inputType}`;
+        document.querySelector(".eventType").innerHTML = `Event Type : ${event.type}`;
+      };
+      
+      const handleChange = (event) => {
+        console.log(event);
+        document.querySelector(".inputValue2").innerHTML = `Input Value : ${event.target.value}`;
+        document.querySelector(".inputName2").innerHTML = `Input Name : ${event.target.name}`;
+        document.querySelector(".inputType2").innerHTML = `Input Type     : ${event.inputType}`;
+        document.querySelector(".eventType2").innerHTML = `Event Type : ${event.type}`;
+      };
+
+      myInput.addEventListener("input", handleInput);
+      myInput.addEventListener("change", handleChange);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Urbanist", sans-serif;
+      }
+      html {
+        color: #fff;
+        font-size: 62.5%;
+      }
+      body {
+        background-color: #1b1b1d;
+      }
+      .main-div {
+        margin: 5rem 2rem 2rem 2rem;
+      }
+      #myInput {
+        padding: 8px;
+        width: -webkit-fill-available;
+      }
+      p {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+      }
+      .output {
+        margin-top: 2rem;
+      }
+      .output-div{
+        display: flex;
+        justify-content: space-around;
+      }
+      h1{
+        color: Yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <input
+        type="text"
+        id="myInput"
+        placeholder="Type Something..."
+        autocomplete="off"
+      />
+      <div class="output-div">
+        <div class="output">
+          <h1>Key Down Details:</h1>
+          <p class="keyPressed">Key Pressed :</p>
+          <p class="keycode">Key Code :</p>
+          <p class="charCode">Char codeAt :</p>
+          <p class="eventType">Event Type :</p>
+        </div>
+        <div class="output">
+          <h1>Key Up Details:</h1>
+          <p class="keyPressed2">Key Pressed :</p>
+          <p class="keycode2">Key Code :</p>
+          <p class="charCode2">Char codeAt :</p>
+          <p class="eventType2">Event Type :</p>
+        </div>
+        <div class="output">
+          <h1>Key Press Details:</h1>
+          <p class="keyPressed3">Key Pressed :</p>
+          <p class="keycode3">Key Code :</p>
+          <p class="charCode3">Char codeAt :</p>
+          <p class="eventType3">Event Type :</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let myInput = document.getElementById("myInput");
+
+      const handleKeyDown = (event) => {
+        document.querySelector(".keyPressed").innerHTML = `Key Pressed : ${event.key}`;
+        document.querySelector(".keycode").innerHTML = `Key Code : ${event.code}`;
+        document.querySelector(".charCode").innerHTML = `Char codeAt : ${event.keyCode}`;
+        document.querySelector(".eventType").innerHTML = `Event Type : ${event.type}`;
+      };
+
+      const handleKeyUp = (event) => {
+        document.querySelector(".keyPressed2").innerHTML = `Key Pressed : ${event.key}`;
+        document.querySelector(".keycode2").innerHTML = `Key Code : ${event.code}`;
+        document.querySelector(".charCode2").innerHTML = `Char codeAt : ${event.keyCode}`;
+        document.querySelector(".eventType2").innerHTML = `Event Type : ${event.type}`;
+      };
+
+      const handleKeyPress = (event) => {
+        document.querySelector(".keyPressed3").innerHTML = `Key Pressed : ${event.key}`;
+        document.querySelector(".keycode3").innerHTML = `Key Code : ${event.code}`;
+        document.querySelector(".charCode3").innerHTML = `Char codeAt : ${event.keyCode}`;
+        document.querySelector(".eventType3").innerHTML = `Event Type : ${event.type}`;
+      };
+
+      myInput.addEventListener("keydown", handleKeyDown);
+      myInput.addEventListener("keyup", handleKeyUp);
+      myInput.addEventListener("keypress", handleKeyPress);
+    </script>
+  </body>
+</html>

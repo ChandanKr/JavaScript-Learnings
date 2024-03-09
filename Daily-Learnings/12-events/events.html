@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="event.css" />
+  </head>
+  <body>
+    <!-- ============== Start of Inline Event Section ============== -->
+    <h1>Inline Event</h1>
+    <div class="inline-event-div">
+      <button onclick="alert('Welcome on single click with Inline Event')">
+        Single Click
+      </button>
+      <button ondblclick="alert('Welcome on double click  with Inline Event')">
+        Double Click
+      </button>
+      <button onmouseover="alert('Welcome on mouseover  with Inline Event')">
+        Mouse Over
+      </button>
+    </div>
+    <!-- ============== End of Inline Event Section ============== -->
+
+    <!-- ============== Start of Dom Event handler Section ============== -->
+    <h1>Dom Event handler</h1>
+    <div class="dom-event-handler-div">
+      <button id="myBtn">Single Click</button>
+      <button id="myBtn1">Double Click</button>
+    </div>
+    <!-- ============== End of Dom Event handler Section ============== -->
+
+    <!-- ============== Start of addEventListener Event handler Section ============== -->
+    <h1>addEventListener Event handler</h1>
+    <div class="event-listener-handler-div">
+      <button id="myBtn3">Single Click</button>
+      <button id="myBtn4">Double Click</button>
+    </div>
+    <!-- ============== End of addEventListener Event handler Section ============== -->
+
+    <script>
+      // Start of Dom Event handler Section
+      document.getElementById("myBtn").onclick = () => {
+        alert("Welcome on single click with Dom Event handler");
+      };
+      document.getElementById("myBtn1").ondblclick = () => {
+        alert("Welcome on double click with Dom Event handler");
+      };
+      // End of Dom Event handler Section
+
+      // Start of addEventListener Event handler Section
+      let myBtn3 = document.getElementById("myBtn3");
+      myBtn3.addEventListener("click", () => {
+        alert("Welcome on single click with addEventListener Event handler");
+      });
+
+      let myBtn4 = document.getElementById("myBtn4");
+      myBtn4.addEventListener("dblclick", () => {
+        alert("Welcome on double click with addEventListener Event handler");
+      });
+      // End of addEventListener Event handler Section
+    </script>
+  </body>
+</html>

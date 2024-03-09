@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+html {
+  color: #fff;
+  font-size: 62.5%;
+}
+body {
+  background-color: #1b1b1d;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 4rem 0rem 2rem;
+  color: #fff;
+}
+button {
+  border-radius: 2rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  background-color: #ffff3e;
+  font-size: 1.8rem;
+  border-width: 0;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: green;
+  color: #fff;
+}

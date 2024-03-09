@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="mouseEvent.css" />
+  </head>
+  <body>
+    <section>
+      <div class="rectangle"></div>
+      <button id="myButton">Click Me</button>
+      <button id="myButton2">Double Click Me</button>
+    </section>
+
+    <script>
+      let myButton = document.getElementById("myButton");
+      let myButton2 = document.getElementById("myButton2");
+      let rectDiv = document.querySelector(".rectangle");
+      let sectionTag = document.getElementsByName("section");
+
+      //   const handleResetButton = () => {
+      //     rectDiv.style.height = "25rem";
+      //     rectDiv.style.width = "25rem";
+      //     rectDiv.style.backgroundColor = "black";
+      //     rectDiv.style.boxShadow = "#e32525 0px 5px 15px";
+      //     rectDiv.style.borderRadius = "0rem";
+      //     sectionTag.style.display = "flex";
+      //     sectionTag.style.flexDirection = "column";
+      //     sectionTag.style.alignItems = "center";
+      //     sectionTag.style.position = "relative";
+
+      //   };
+
+      const handleMouseEvents = () => {
+        console.log("click");
+        rectDiv.classList.add("addTransition");
+        rectDiv.classList.remove("addTransition2");
+        rectDiv.classList.remove("addTransition3");
+        rectDiv.classList.remove("addTransition4");
+      };
+
+      const handleMouseEvents2 = () => {
+        console.log("dblclick");
+        rectDiv.classList.add("addTransition2");
+        rectDiv.classList.remove("addTransition");
+        rectDiv.classList.remove("addTransition3");
+        rectDiv.classList.remove("addTransition4");
+      };
+
+      const handleMouseEvents3 = () => {
+        console.log("mouseover");
+        rectDiv.classList.add("addTransition3");
+        rectDiv.classList.remove("addTransition");
+        rectDiv.classList.remove("addTransition2");
+        rectDiv.classList.remove("addTransition4");
+      };
+
+      const handleMouseEvents4 = () => {
+        console.log("mousedown");
+        rectDiv.classList.add("addTransition4");
+        rectDiv.classList.remove("addTransition");
+        rectDiv.classList.remove("addTransition2");
+        rectDiv.classList.remove("addTransition3");
+      };
+
+      //   resetButton.addEventListener("click", handleResetButton);
+      myButton.addEventListener("click", handleMouseEvents);
+      myButton2.addEventListener("dblclick", handleMouseEvents2);
+      rectDiv.addEventListener("mouseover", handleMouseEvents3);
+      rectDiv.addEventListener("mousedown", handleMouseEvents4);
+    </script>
+  </body>
+</html>
