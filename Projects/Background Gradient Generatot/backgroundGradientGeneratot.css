@@ -10,14 +10,18 @@ html {
 }
 body {
   background-image: linear-gradient(to top left, #5ede7b, #02a171);
+}
+.mainDiv{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-section {
+.contentDiv {
   text-align: center;
   width: 30%;
+  height: 15%;
 }
 .btnClass {
   display: flex;
@@ -69,5 +73,6 @@ i{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
+    width: 65%;
 }
