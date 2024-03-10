@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  color: #fff;
+  font-size: 62.5%;
+}
+body {
+  background-image: linear-gradient(to top left, #5ede7b, #02a171);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+section {
+  text-align: center;
+  width: 30%;
+}
+.btnClass {
+  display: flex;
+  justify-content: space-around;
+}
+button {
+  border-radius: 5rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border: 2px solid black;
+  margin: 0 5rem;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 14px 0px #000;
+}
+#myButton {
+  background-color: #5ede7b;
+  color: #fff;
+}
+#myButton2 {
+    background-color: #02a171;
+    color: #fff;
+}
+h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 2rem;
+}
+.copyCode {
+  background-image: linear-gradient(to right, #5ede7b, #02a171);
+  height: 100%;
+  font-size: 1.6rem;
+  text-align: start;
+  backdrop-filter: blur(10px);
+  border-left: 3px solid #e4e588;
+  padding: 5px 5px 5px 15px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 14px 0px #000;
+}
+
+i{
+    font-size: 2rem;
+    border: 0.3rem solid white;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 10px 10px 14px 0px #000;
+}
+
+.iconsDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+}
