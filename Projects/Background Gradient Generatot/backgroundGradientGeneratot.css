@@ -4,12 +4,116 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+html {
+  color: #fff;
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(to top left, #5ede7b, #02a171);
+  padding: 1rem;
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contentDiv {
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  margin-top: 2rem;
+}
+
+.btnClass {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  border-radius: 5rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border: 2px solid black;
+  margin: 0.5rem;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 14px 0px #000;
+}
+
+#myButton{
+  background-color: #5EDE7B;
+}
+
+#myButton2{
+  background-color: #02A171;
+}
+
+h1{
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 5px 5px 5px #000;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 2rem 0;
+}
+
+.copyCode {
+  background-image: linear-gradient(to right, #5ede7b, #02a171);
+  font-size: 2rem;
+  text-align: start;
+  backdrop-filter: blur(10px);
+  border-left: 3px solid #e4e588;
+  padding: 5px 15px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 14px 0px #000;
+  margin-bottom: 2rem;
+}
+
+i {
+  font-size: 2rem;
+  border: 0.3rem solid white;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 10px 10px 14px 0px #000;
+  margin: 5px;
+}
+
+.iconsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 html {
   color: #fff;
   font-size: 62.5%;
 }
 body {
-  background-image: linear-gradient(to top left, #5ede7b, #02a171);
+  background-image: linear-gradient(to bottom, #E82A03, #00939B);
 }
 .mainDiv{
   display: flex;
@@ -75,4 +179,4 @@ i{
     justify-content: space-between;
     margin-bottom: 5rem;
     width: 65%;
-}
+} */
