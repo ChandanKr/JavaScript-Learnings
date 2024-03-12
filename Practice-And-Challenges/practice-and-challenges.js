@@ -428,3 +428,38 @@ console.log("****From '8-string.js'****");
     });
     console.log(isPangram("A quick brown fox jumps over the lazy dog.")); // Output: Yes, it is a Pangram
     console.log(isPangram("A quick green fox jumps over the lazy dog.")); // Output: No, It's not a Pangram
+
+//---------------------------------------------------------------
+console.log("****From '14-date-and-time-objects.js'****");
+
+//! Write a function to add a specified number of days to a given date.
+    // Given Date = "2024-03-29"
+
+    const addDaysToDate = (date, extraDay) => {
+        let updatedDate = date.setDate(date.getDate() + extraDay);
+        let updatedDateAfterAddingExtraDay = new Date(updatedDate);
+        return updatedDateAfterAddingExtraDay;
+    };
+
+    const givenDate = new Date("2024-03-29");
+    console.log(givenDate.toLocaleDateString()); // Output: 29/3/2024
+
+    const newDate = addDaysToDate(givenDate, 7);
+    console.log(newDate.toLocaleDateString()); // Output: 5/4/2024
+
+//! Write a function to calculate the difference in days between two given dates.
+    // Given: 
+        // Date1 = "2024-02-19"
+        // Date2 = "2024-02-29"
+    
+    const getDaysDifference = (date1, date2) => {
+        let difference = Math.abs(date2 - date1);
+        let oneDayInMS = 24 * 60 *60 * 1000;
+
+        return Math.floor(difference / oneDayInMS);
+    };
+
+    const date1 = new Date("2024-02-19");
+    const date2 = new Date("2024-02-29");
+    // getDaysDifference(date1, date2);
+    console.log(getDaysDifference(date1, date2)); // Output: 10
