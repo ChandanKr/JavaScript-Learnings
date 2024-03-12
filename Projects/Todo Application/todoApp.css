@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  color: #fff;
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(
+      41deg,
+      rgba(107, 107, 107, 0.04) 0%,
+      rgba(107, 107, 107, 0.04) 8%,
+      rgba(31, 31, 31, 0.04) 8%,
+      rgba(31, 31, 31, 0.04) 100%
+    ),
+    linear-gradient(
+      9deg,
+      rgba(228, 228, 228, 0.04) 0%,
+      rgba(228, 228, 228, 0.04) 62%,
+      rgba(54, 54, 54, 0.04) 62%,
+      rgba(54, 54, 54, 0.04) 100%
+    ),
+    linear-gradient(
+      124deg,
+      rgba(18, 18, 18, 0.04) 0%,
+      rgba(18, 18, 18, 0.04) 37%,
+      rgba(233, 233, 233, 0.04) 37%,
+      rgba(233, 233, 233, 0.04) 100%
+    ),
+    linear-gradient(
+      253deg,
+      rgba(201, 201, 201, 0.04) 0%,
+      rgba(201, 201, 201, 0.04) 55%,
+      rgba(47, 47, 47, 0.04) 55%,
+      rgba(47, 47, 47, 0.04) 100%
+    ),
+    linear-gradient(
+      270deg,
+      rgba(172, 172, 172, 0.04) 0%,
+      rgba(172, 172, 172, 0.04) 33%,
+      rgba(26, 26, 26, 0.04) 33%,
+      rgba(26, 26, 26, 0.04) 100%
+    ),
+    linear-gradient(
+      64deg,
+      rgba(11, 11, 11, 0.04) 0%,
+      rgba(11, 11, 11, 0.04) 38%,
+      rgba(87, 87, 87, 0.04) 38%,
+      rgba(87, 87, 87, 0.04) 100%
+    ),
+    linear-gradient(
+      347deg,
+      rgba(199, 199, 199, 0.04) 0%,
+      rgba(199, 199, 199, 0.04) 69%,
+      rgba(4, 4, 4, 0.04) 69%,
+      rgba(4, 4, 4, 0.04) 100%
+    ),
+    linear-gradient(
+      313deg,
+      rgba(36, 36, 36, 0.04) 0%,
+      rgba(36, 36, 36, 0.04) 20%,
+      rgba(91, 91, 91, 0.04) 20%,
+      rgba(91, 91, 91, 0.04) 100%
+    ),
+    linear-gradient(90deg, rgb(10, 17, 72), rgb(35, 148, 228));
+  padding: 1rem;
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: 100vh;
+  margin-top: 5rem;
+}
+
+.contentDiv {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 5px 5px 5px #000;
+}
+
+.taskAddDiv {
+  display: flex;
+  width: 70rem;
+}
+
+.inputBox {
+  font-size: 18px;
+  padding: 5px 20px;
+  width: 100%;
+  outline: none;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #c4d1eb;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px 0px #e2e2e2;
+  transition: 0.3s ease;
+}
+
+.inputBox:focus {
+  background: #f2f2f2;
+  border: 1px solid #5a7ec7;
+  border-radius: 10px;
+}
+
+.inputBox::placeholder {
+  color: #dddddd;
+}
+
+.addBtn {
+  font-size: 18px;
+  padding: 5px 20px;
+  width: 20%;
+  outline: none;
+  background-image: linear-gradient(to bottom right, #2f69c4, #13892c);
+  color: #fff;
+  border: 1px solid #c4d1eb;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px 0px #e2e2e2;
+  transition: 0.3s ease;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.allTasksDiv{
+    margin-top: 2rem;
+}
+
+.allTasksDiv div{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.allTasksDiv p{
+    font-size: 1.8rem;
+    background-image: linear-gradient(to bottom left, #EC3F92, #5737BC);
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    width: 90%;
+    text-align: start;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 0px #e2e2e2;
+    transition: 0.3s ease;
+    text-transform: capitalize;
+}
+
+.allTasksDiv button{
+    background-image: linear-gradient(to bottom left, #2F69C4, #13892C);
+    color: #fff;
+    margin: 0 0 0 1rem;
+    width: 19%;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 0px #e2e2e2;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
