@@ -305,3 +305,145 @@ const date1 = new Date("2024-02-19");
 const date2 = new Date("2024-02-29");
 console.log(getDaysDifference(date1, date2)); // Output: 10
  ```
+#### **18.**  Explain the difference between passing objects by reference and by value in JavaScript. Provide an example to demonstrate each scenario.
+#### **Ans:** 
+
+- **Pass by Value**
+    - When a primitive data type (like numbers, strings, booleans, null, undefined, or symbols) is passed as an argument to a function or assigned to another variable, it's passed by value.
+    - When passing by value, a copy of the primitive value is created and passed to the function or assigned to a variable. 
+    - Any changes made to the copy do not affect the original value.
+    ```
+    let num = 10;
+
+    function increment(value) {
+        return value + 1; // Incrementing the copied value
+    }
+
+    console.log(increment(num)); // Output: 11
+    console.log(num); // Output: 10 (unchanged)
+    ```
+
+- **Pass by Reference**
+    - An object (including arrays and functions) is passed as an argument to a function or assigned to another variable, it's passed by reference.
+    - When passing by reference, a reference to the memory location of the object is passed to the function or assigned to a variable.
+    - Any changes made to the object through this reference will affect the original object.
+    ```
+    let obj = { id: 5, name: "Chandan" };
+
+    let copyObj = obj;
+
+    copyObj.name = "Chandan Kumar";
+
+    console.log(copyObj); // Output: { id: 5, name: 'Chandan Kumar' }
+    console.log("original", obj); // Output: original { id: 5, name: 'Chandan Kumar' }
+    ```
+
+#### **19.**   Given an object representing a studentData, write a function to add a new subject with its corresponding grade to the studentData's record. Also check if the grades property is present or not? if not, add the property.
+    ```
+    studentData = {
+        name: "Raj",
+        age: 20,
+        grades: {
+        math: 90,
+        science: 85,
+        history: 88,
+        },
+    };
+    ```
+#### **Ans:** 
+    ```
+    let studentData = {
+      name: "Raj",
+      age: 20,
+      grades: {
+        math: 90,
+        science: 85,
+        history: 88,
+      },
+    };
+
+    const addSubjectGrade = (studentData, subject, marks) => {
+      if (!studentData.grades) {
+        studentData.grades = {};
+      }
+      return (studentData.grades[subject] = marks);
+    };
+
+    addSubjectGrade(studentData, "computer", 92);
+    console.log(studentData);
+    ```
+
+#### **20.**   Write a function that compares two objects to determine if they have the same properties and values.
+```
+objA = { name: "Alice", age: 26, city: "New York" };
+objB = { name: "Alice", age: 26, city: "New York" };
+objC = { name: "Bob", age: 30, city: "San Francisco" };
+
+areObjectsEqual(objA, objB) => return true
+areObjectsEqual(objA, objC) => return false
+```
+#### **Ans:** 
+
+
+    ```
+    const areObjectsEqual = (obj1, obj2) => {
+        let o1 = Object.keys(obj1);
+        let o2 = Object.keys(obj2);
+
+        if (o1.length != o2.length) {
+            console.log("There keys are not same");
+            return false;
+        }
+
+        for (let key in obj1) {
+            if (obj1[key] !== obj2[key]) {
+              return false;
+            }
+        }
+
+        return true;
+    };
+
+    let objA = { name: "Alice", age: 26, city: "New York" };
+    let objB = { name: "Alice", age: 26, city: "New York" };
+    let objC = { name: "Bob", age: 30, city: "San Francisco" };
+
+    console.log(areObjectsEqual(objA, objB)); // Output: true
+    console.log(areObjectsEqual(objA, objC)); // Output: false
+    ```
+#### **21.**   Problem: Write a function that transforms an array of an objects into an object where the keys are the objects' ids.
+```
+let inputArray = [
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+    { id: 3, name: "Charlie" },
+];
+
+Should print: 
+            { 
+                '1': { id: 1, name: 'Alice' }, 
+                '2': { id: 2, name: 'Bob' }, 
+                '3': { id: 3, name: 'Charlie' } 
+            }
+```
+#### **Ans:** 
+
+
+    ```
+    let inputArray = [
+        { id: 1, name: "Alice" },
+        { id: 2, name: "Bob" },
+        { id: 3, name: "Charlie" },
+    ];
+
+    const arrayToObj = (arr) => {
+    let obj = {};
+    for (let key of arr) {
+        // console.log(key.id, key);
+        obj[key.id] = key;
+    }
+    return obj;
+    };
+
+    console.log(arrayToObj(inputArray));
+    ```

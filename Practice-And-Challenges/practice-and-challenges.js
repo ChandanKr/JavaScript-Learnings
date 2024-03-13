@@ -463,3 +463,27 @@ console.log("****From '14-date-and-time-objects.js'****");
     const date2 = new Date("2024-02-29");
     // getDaysDifference(date1, date2);
     console.log(getDaysDifference(date1, date2)); // Output: 10
+    
+//---------------------------------------------------------------
+console.log("****From '15-time-based-events.js'****");
+
+//! WAP that defines a function called repeatedFunction. 
+    
+    //! This function should log the message "This function repeats every 1000 milliseconds." to the console. 
+
+    //! Then, set up an interval using setInterval() to call repeatedFunction every 1000 ms. 
+
+    //! Additionally, after 10 seconds have elapsed, use setTimeout() to clear the interval previously set up.
+
+    //! Make sure to log the message "Interval cleared after 10 seconds..." when the interval is cleared.
+
+    const repeatedFunction = () => {
+        console.log("This function repeats every 1000 milliseconds.");
+    };
+
+    const intervalID = setInterval(repeatedFunction, 1000);
+
+    setTimeout(() => {
+        clearInterval(intervalID);
+        console.log("Interval cleared after 10 seconds...");
+    }, 10000);
