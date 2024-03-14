@@ -338,7 +338,7 @@ console.log(getDaysDifference(date1, date2)); // Output: 10
     console.log("original", obj); // Output: original { id: 5, name: 'Chandan Kumar' }
     ```
 
-#### **19.**   Given an object representing a studentData, write a function to add a new subject with its corresponding grade to the studentData's record. Also check if the grades property is present or not? if not, add the property.
+#### **19.** Given an object representing a studentData, write a function to add a new subject with its corresponding grade to the studentData's record. Also check if the grades property is present or not? if not, add the property.
     ```
     studentData = {
         name: "Raj",
@@ -373,7 +373,7 @@ console.log(getDaysDifference(date1, date2)); // Output: 10
     console.log(studentData);
     ```
 
-#### **20.**   Write a function that compares two objects to determine if they have the same properties and values.
+#### **20.** Write a function that compares two objects to determine if they have the same properties and values.
 ```
 objA = { name: "Alice", age: 26, city: "New York" };
 objB = { name: "Alice", age: 26, city: "New York" };
@@ -411,7 +411,7 @@ areObjectsEqual(objA, objC) => return false
     console.log(areObjectsEqual(objA, objB)); // Output: true
     console.log(areObjectsEqual(objA, objC)); // Output: false
     ```
-#### **21.**   Problem: Write a function that transforms an array of an objects into an object where the keys are the objects' ids.
+#### **21.** Write a function that transforms an array of an objects into an object where the keys are the objects' ids.
 ```
 let inputArray = [
     { id: 1, name: "Alice" },
@@ -446,4 +446,30 @@ Should print:
     };
 
     console.log(arrayToObj(inputArray));
+    ```
+
+#### **21.** What is difference between Global Variable and Local Variable?
+#### **Ans:** 
+- **Global Variable:** A variable declared in the global scope is referred to as a global variable. It has global visibility and can be accessed from anywhere in the code.
+
+- **Local Variable:** A variable declared within a function (function scope) or a block (block scope) is often referred to as a local variable. It has local visibility, limited to the function or block where it's declared.
+
+    ```
+    const globalVariable = "I'm a global variable";
+
+    function myFunction() {
+        // Function scope
+        const functionVariable = "I'm a function variable";
+
+        if (true) {
+        // Block scope
+        const blockVariable = "I'm a block variable";
+        console.log(blockVariable); // Output: I'm a block variable
+        console.log(functionVariable); // Output: I'm a function variable
+        console.log(globalVariable); // Output: I'm a global variable
+        }
+        console.log(blockVariable); // Output: ReferenceError: blockVariable is not defined
+    }
+
+    myFunction();
     ```
