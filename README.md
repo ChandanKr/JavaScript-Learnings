@@ -473,3 +473,14 @@ Should print:
 
     myFunction();
     ```
+#### **22.** Given a text with lots of extra spaces in between, Remove all those and make it a normalized text.
+```
+text = "This      has    extra     spaces   ."
+```
+#### **Ans:** 
+```
+const text = "This      has    extra     spaces   .";
+const normalizedText = text.replaceAll(/\s+/g, " ")
+console.log(text); // Output: This      has    extra     spaces   .
+console.log(normalizedText); // Output: This has extra spaces.
+```

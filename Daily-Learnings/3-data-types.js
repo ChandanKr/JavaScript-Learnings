@@ -25,6 +25,12 @@
 // console.log(typeof(myName)); // string
 // -----------------------------------------------------------------------------
 
-// var am_i_a_developer = true;
-// console.log(am_i_a_developer);
-// console.log(typeof(am_i_a_developer)); // boolean
+// const mySymbol = Symbol("This is my symbol");
+// console.log(typeof mySymbol); // Output: symbol
+// console.log(mySymbol.description); // Output: This is my symbol
+// console.log(mySymbol); // Output: Symbol(This is my symbol)
+// -----------------------------------------------------------------------------
+
+// const anotherLargeNumber = BigInt("123456789012345678901234567890");
+// console.log(anotherLargeNumber); // Output: 123456789012345678901234567890n
+// console.log(typeof anotherLargeNumber); // Output: bigint

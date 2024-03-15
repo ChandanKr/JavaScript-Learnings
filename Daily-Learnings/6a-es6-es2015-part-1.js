@@ -1,4 +1,4 @@
-// ES6 Part 1:
+//! ES6 Part 1:
     // LET vs CONST vs VAR
     // Template Literals
     // Default Parameters
