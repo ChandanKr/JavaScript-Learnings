@@ -477,13 +477,42 @@ console.log("****From '15-time-based-events.js'****");
 
     //! Make sure to log the message "Interval cleared after 10 seconds..." when the interval is cleared.
 
-    const repeatedFunction = () => {
-        console.log("This function repeats every 1000 milliseconds.");
+    // const repeatedFunction = () => {
+    //     console.log("This function repeats every 1000 milliseconds.");
+    // };
+
+    // const intervalID = setInterval(repeatedFunction, 1000);
+
+    // setTimeout(() => {
+    //     clearInterval(intervalID);
+    //     console.log("Interval cleared after 10 seconds...");
+    // }, 10000);
+
+//---------------------------------------------------------------
+console.log("**** From '24-higher-order-function.js' ****");
+
+//! Write a program to perform mathematical operations using callback functions and two variables in JavaScript.
+
+    //? Instructions:
+    //* Define a higher-order function called mathOperation that takes three arguments: x, y, and operation.
+    //* Implement two callback functions:
+    //* add: Takes two numbers x and y and returns their sum.
+    //* sub: Takes two numbers x and y and returns the result of subtracting x from y.
+    //* Use the mathOperation function to perform addition and subtraction operations on two variables a and b.
+    //* Display the results of the operations.
+
+    const add = (x, y) => {
+        return x + y;
+    };
+    
+    const subtract = (x, y) => {
+        return y - x;
     };
 
-    const intervalID = setInterval(repeatedFunction, 1000);
+    const mathOperation = (num1, num2, operation) => {
+        return operation(num1, num2);
+    };
 
-    setTimeout(() => {
-        clearInterval(intervalID);
-        console.log("Interval cleared after 10 seconds...");
-    }, 10000);
+    console.log(mathOperation(10, 20, add)); // Output: 30
+    console.log(mathOperation(25, 40, subtract)); // Output: 15
+    

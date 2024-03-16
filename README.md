@@ -484,3 +484,29 @@ const normalizedText = text.replaceAll(/\s+/g, " ")
 console.log(text); // Output: This      has    extra     spaces   .
 console.log(normalizedText); // Output: This has extra spaces.
 ```
+
+#### **23.** Write a program to perform mathematical operations using callback functions and two variables in JavaScript.
+* **Instructions:**
+    * Define a higher-order function called mathOperation that takes three arguments: x, y, and operation.
+    * Implement two callback functions:
+    * add: Takes two numbers x and y and returns their sum.
+    * sub: Takes two numbers x and y and returns the result of subtracting x from y.
+    * Use the mathOperation function to perform addition and subtraction operations on two variables a and b.
+    * Display the results of the operations.
+#### **Ans:** 
+```
+const add = (x, y) => {
+    return x + y;
+};
+
+const subtract = (x, y) => {
+    return y - x;
+};
+
+const mathOperation = (num1, num2, operation) => {
+    return operation(num1, num2);
+};
+
+console.log(mathOperation(10, 20, add)); // Output: 30
+console.log(mathOperation(25, 40, subtract)); // Output: 15
+```

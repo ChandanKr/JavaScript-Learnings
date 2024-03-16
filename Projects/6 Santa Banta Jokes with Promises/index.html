@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Santa-Banta Jokes!</h1>
+        <section class="api_body">
+            <p class="santa"></p>
+            <p class="banta"></p>
+        </section>
+        <button id="fetchJoke">Another One</button>
+    </div>
+
+    <script>
+        const santa = document.querySelector(".santa");
+        const banta = document.querySelector(".banta");
+        const getJokesButton = document.querySelector("#fetchJoke");
+        // const apiURL = "https://icanhazdadjoke.com/";
+        const apiURL = "https://official-joke-api.appspot.com/random_joke";
+
+        const fetchData = () => {
+            const response = fetch(apiURL, {
+                headers: {
+                    Accept: "application/json",
+                }
+            })
+                .then((res) => {
+                    console.log(res);
+                    return res.json();
+                })
+                .then((data) => {
+                    console.log(data.setup);
+                    console.log(data.punchline);
+                    santa.innerHTML = `<b>Santa:</b> ${data.setup}`;
+                    banta.innerHTML = `<b>Banta:</b> ${data.punchline}`;
+                })
+                .catch((error) => {
+                    santa.innerHTML = `Looks like the api is not working....`;
+                    banta.innerHTML = `Yes!!, Pls correct this.`;
+                });
+        };
+
+        fetchData();
+
+        getJokesButton.addEventListener("click", fetchData);
+    </script>
+</body>
+
+</html>
