@@ -1,5 +1,5 @@
 
-# **Interview Questions:**
+<h1 align="center">Interview Questions:</h1>
 
 
 #### **1.** What is difference between _null_ and _undefined_ ?
