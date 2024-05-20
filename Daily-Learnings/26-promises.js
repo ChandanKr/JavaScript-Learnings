@@ -8,9 +8,9 @@
 
 //* It can be in one of three states:
 
-    //? Pending: Initial state, neither fulfilled nor rejected.
-    //* Fulfilled(Resolved): The operation completed successfully.
-    //! Rejected: The operation failed or encountered an error.
+//? Pending: Initial state, neither fulfilled nor rejected.
+//* Fulfilled(Resolved): The operation completed successfully.
+//! Rejected: The operation failed or encountered an error.
 
 //? Promises have built-in methods like "then" and "catch" to handle the results of asynchronous operations when they complete or encounter errors, making it easier to write asynchronous code that is more readable and maintainable compared to traditional callback-based approaches.
 
@@ -21,9 +21,9 @@
 //? You can create a promise using the Promise constructor. This involves creating a new instance of the Promise class, which takes a function as an argument. This function, often referred to as the "executor function," takes two parameters: resolve and reject. You call resolve when the asynchronous operation is successful and reject when it encounters an error.
 
 //* Syntax:
-    // const promise = new Promise(function (resolve, reject){
-        // code here
-    // });
+// const promise = new Promise(function (resolve, reject){
+// code here
+// });
 
 //* real life example
 
@@ -42,33 +42,32 @@
 //? You can also create a promise by defining a function that returns a promise. This function usually encapsulates some asynchronous operation. Inside this function, you manually create a promise and resolve or reject it based on the result of the asynchronous operation.
 
 // syntax
-// function myPromiseFunction() {
-//   return new Promise((resolve, reject) => {
-//     // Asynchronous operations here
-//     // If successful, call resolve(value)
-//     // If there's an error, call reject(error)
-//   });
-// }
+function myPromiseFunction() {
+  return new Promise((resolve, reject) => {
+    // Asynchronous operations here
+    // If successful, call resolve(value)
+    // If there's an error, call reject(error)
+  });
+}
 
-// const pr = new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     // resolve("Hey, I missed you");
-//     reject("Sorry, I can't");
-//   }, 2000);
-// })
-// .then((response) => {
-// console.log(response);
-// })
-// .catch((error) => {
-// console.log(error);
-// })
-// .finally(() => {
-// console.log("Don't worry, We all miss you and keep smiling");
-// });
+const pr = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Hey, I missed you");
+    // reject("Sorry, I can't");
+  }, 2000);
+})
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+  .finally(() => {
+    console.log("Don't worry, We all miss you and keep smiling");
+  });
 
 // 1: By default promise has the pending state
 // 2: the moment we use setTimeout, we need to handle promises, we can do using then and catch
-
 
 // Example usage:
 
